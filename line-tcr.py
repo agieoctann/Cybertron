@@ -15,7 +15,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" Chivas Bot
+helpMessage =""" cybertron Bot
 [Id︎]
 [Mid]
 [Me︎]
@@ -76,8 +76,8 @@ Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid]
-admin=["YOUR_MID_HERE"]
-wait = {
+admin=["ua7f6b7ce83b319e2c3cd4d3486ad6723"]
+wait {
     'contact':True,
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
@@ -87,12 +87,12 @@ wait = {
     'message':"Thanks for add me",
     "lang":"JP",
     "comment":"Thanks for add me",
-    "commentOn":False,
+    "commentOn":True,
     "commentBlack":{},
     "wblack":False,
     "dblack":False,
     "clock":True,
-    "cName":"Chivas ",
+    "cName":"¤ctαπ",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
