@@ -15,7 +15,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" CYBERTRON 
+helpMessage ="""   CYBERTRON BOT
 [Id︎]
 [Mid]
 [Me︎]
@@ -52,7 +52,7 @@ helpMessage =""" CYBERTRON
 
 [*] Command kicker only [*]
 
-[Bye]
+[Bye all]
 [Kill ban]
 [Kill 「@」]
 [Ban 「@」] By Tag
@@ -73,7 +73,7 @@ KAC=[cl,ki,kk,kc]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
-Cmid = kc.getProfile().mid
+Cmid = kc.getProfile().u68c0341ad4fc7e5735cd7b525da9145e
 
 Bots=[mid,Amid,Bmid,Cmid]
 admin=["ua7f6b7ce83b319e2c3cd4d3486ad6723"]
@@ -97,7 +97,7 @@ wait = {
     "wblacklist":False,
     "dblacklist":False,
     "protectionOn":True,
-    "atjointicket":False
+    "atjointicket":True
     }
 
 wait2 = {
@@ -650,7 +650,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Done")
                     else:
-                        cl.sendText(msg.to,"already open")
+                        cl.sendText(msg.to,"QR already open")
                 else:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Can not be used outside the group")
@@ -662,9 +662,9 @@ def bot(op):
                     X.preventJoinByTicket = False
                     ki.updateGroup(X)
                     if wait["lang"] == "JP":
-                        ki.sendText(msg.to,"Done Chivas")
+                        ki.sendText(msg.to,"Done Cybertron")
                     else:
-                        ki.sendText(msg.to,"already open")
+                        ki.sendText(msg.to,"QR already open")
                 else:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Can not be used outside the group")
@@ -676,9 +676,9 @@ def bot(op):
                     X.preventJoinByTicket = False
                     kk.updateGroup(X)
                     if wait["lang"] == "JP":
-                        kk.sendText(msg.to,"Done Chivas")
+                        kk.sendText(msg.to,"Done Cybertron")
                     else:
-                        kk.sendText(msg.to,"already open")
+                        kk.sendText(msg.to,"QR already open")
                 else:
                     if wait["lang"] == "JP":
                         kk.sendText(msg.to,"Can not be used outside the group")
@@ -690,9 +690,9 @@ def bot(op):
                     X.preventJoinByTicket = False
                     kc.updateGroup(X)
                     if wait["lang"] == "JP":
-                        kc.sendText(msg.to,"Done Chivas")
+                        kc.sendText(msg.to,"Done Cybertron")
                     else:
-                        kc.sendText(msg.to,"already open")
+                        kc.sendText(msg.to,"QR already open")
                 else:
                     if wait["lang"] == "JP":
                         kc.sendText(msg.to,"Can not be used outside the group")
@@ -706,7 +706,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Done")
                     else:
-                        cl.sendText(msg.to,"already close")
+                        cl.sendText(msg.to,"QR already close")
                 else:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Can not be used outside the group")
@@ -718,9 +718,9 @@ def bot(op):
                     X.preventJoinByTicket = True
                     ki.updateGroup(X)
                     if wait["lang"] == "JP":
-                        ki.sendText(msg.to,"Done Chivas")
+                        ki.sendText(msg.to,"Done Cybertron")
                     else:
-                        ki.sendText(msg.to,"already close")
+                        ki.sendText(msg.to,"QR already close")
                 else:
                     if wait["lang"] == "JP":
                         ki.sendText(msg.to,"Can not be used outside the group")
@@ -732,9 +732,9 @@ def bot(op):
                     X.preventJoinByTicket = True
                     kk.updateGroup(X)
                     if wait["lang"] == "JP":
-                        kk.sendText(msg.to,"Done Chivas")
+                        kk.sendText(msg.to,"Done Cybertron ")
                     else:
-                        kk.sendText(msg.to,"already close")
+                        kk.sendText(msg.to,"QR already close")
                 else:
                     if wait["lang"] == "JP":
                         kk.sendText(msg.to,"Can not be used outside the group")
@@ -746,16 +746,16 @@ def bot(op):
                     X.preventJoinByTicket = True
                     kc.updateGroup(X)
                     if wait["lang"] == "JP":
-                        kc.sendText(msg.to,"Done Chivas")
+                        kc.sendText(msg.to,"Done Cybertron ")
                     else:
-                        kc.sendText(msg.to,"already close")
+                        kc.sendText(msg.to,"QR already close")
                 else:
                     if wait["lang"] == "JP":
                         kc.sendText(msg.to,"Can not be used outside the group")
                     else:
                         kc.sendText(msg.to,"Not for use less than group")
             elif "jointicket " in msg.text.lower():
-		rplace=msg.text.lower().replace("jointicket ")
+		rplace=msg.text.lower().replace("jointicket")
 		if rplace == "on":
 			wait["atjointicket"]=True
 		elif rplace == "off":
@@ -779,7 +779,7 @@ def bot(op):
                     try:
                         gCreator = ginfo.creator.displayName
                     except:
-                        gCreator = "Error"
+                        gCreator = "Tidak Diketahui"
                     if wait["lang"] == "JP":
                         if ginfo.invitee is None:
                             sinvitee = "0"
@@ -821,7 +821,7 @@ def bot(op):
                                      "STKVER": "100" }
                 ki.sendMessage(msg)
                 kk.sendMessage(msg)
-            elif msg.text in ["Hehehe"]:
+            elif msg.text in ["Hehe"]:
                 msg.contentType = 7
                 msg.text = None
                 msg.contentMetadata = {
@@ -1478,13 +1478,13 @@ def bot(op):
             elif "Cleanse" in msg.text:
                 if msg.toType == 2:
                     print "ok"
-                    _name = msg.text.replace("Cleanse","")
+                    _name = msg.text.replace("Ruang Kosong","")
                     gs = ki.getGroup(msg.to)
                     gs = kk.getGroup(msg.to)
                     gs = kc.getGroup(msg.to)
                     ki.sendText(msg.to,"Just some casual cleansing ô")
-                    kk.sendText(msg.to,"Group cleansed.")
-                    kc.sendText(msg.to,"Fuck You All")
+                    kk.sendText(msg.to,"Cybertron Prosesing Clean.")
+                    kc.sendText(msg.to," Succes!! ")
                     targets = []
                     for g in gs.members:
                         if _name in g.displayName:
@@ -1527,7 +1527,7 @@ def bot(op):
                                     kicker.kickoutFromGroup(msg.to,[target])
                                     print (msg.to,[g.mid])
                                 except:
-                                    ki.sendText(msg.to,"Succes Cv")
+                                    ki.sendText(msg.to,"Succes!!")
                                     kk.sendText(msg.to,"Fuck You")
             elif "Blacklist @ " in msg.text:
                 _name = msg.text.replace("Blacklist @ ","")
@@ -1545,7 +1545,7 @@ def bot(op):
                                     wait["blacklist"][target] = True
                                     f=codecs.open('st2__b.json','w','utf-8')
                                     json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                                    k3.sendText(msg.to,"Succes Cv")
+                                    k3.sendText(msg.to,"Succes!!")
                                 except:
                                     ki.sendText(msg.to,"error")
             elif "Ban @" in msg.text:
@@ -1561,19 +1561,19 @@ def bot(op):
                         if _nametarget == g.displayName:
                             targets.append(g.mid)
                     if targets == []:
-                        ki.sendText(msg.to,"Not found Cv")
-                        kk.sendText(msg.to,"Not found Cv")
-                        kc.sendText(msg.to,"Not found Cv")
+                        ki.sendText(msg.to,"Not found ")
+                        kk.sendText(msg.to,"Not found ")
+                        kc.sendText(msg.to,"Not found ")
                     else:
                         for target in targets:
                             try:
                                 wait["blacklist"][target] = True
                                 f=codecs.open('st2__b.json','w','utf-8')
                                 json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                                cl.sendText(msg.to,"Succes Cv")
-                                ki.sendText(msg.to,"Succes Cv")
-                                kk.sendText(msg.to,"Succes Cv")
-                                kc.sendText(msg.to,"Succes Cv")
+                                cl.sendText(msg.to,"Succes ")
+                                ki.sendText(msg.to,"Succes ")
+                                kk.sendText(msg.to,"Succes ")
+                                kc.sendText(msg.to,"Succes ")
                             except:
                                 ki.sendText(msg.to,"Error")
                                 kk.sendText(msg.to,"Error")
@@ -1591,28 +1591,28 @@ def bot(op):
                         if _nametarget == g.displayName:
                             targets.append(g.mid)
                     if targets == []:
-                        ki.sendText(msg.to,"Not found Cv")
-                        kk.sendText(msg.to,"Not found Cv")
-                        kc.sendText(msg.to,"Not found Cv")
+                        ki.sendText(msg.to,"Not found ")
+                        kk.sendText(msg.to,"Not found ")
+                        kc.sendText(msg.to,"Not found ")
                     else:
                         for target in targets:
                             try:
                                 del wait["blacklist"][target]
                                 f=codecs.open('st2__b.json','w','utf-8')
                                 json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                                cl.sendText(msg.to,"Succes Cv")
-                                ki.sendText(msg.to,"Succes Cv")
-                                kk.sendText(msg.to,"Succes Cv")
-                                kc.sendText(msg.to,"Succes Cv")
+                                cl.sendText(msg.to,"Succes ")
+                                ki.sendText(msg.to,"Succes ")
+                                kk.sendText(msg.to,"Succes ")
+                                kc.sendText(msg.to,"Succes ")
                             except:
-                                ki.sendText(msg.to,"Succes Cv")
-                                kk.sendText(msg.to,"Succes Cv")
-                                kc.sendText(msg.to,"Succes Cv")
+                                ki.sendText(msg.to,"Succes ")
+                                kk.sendText(msg.to,"Succes ")
+                                kc.sendText(msg.to,"Succes ")
 #-----------------------------------------------
             elif msg.text in ["Test"]:
-                ki.sendText(msg.to,"Ok Cv 􀨁􀄻double thumbs up􏿿")
-                kk.sendText(msg.to,"Ok Cv 􀨁􀄻double thumbs up􏿿")
-                kc.sendText(msg.to,"Ok Cv 􀨁􀄻double thumbs up􏿿")
+                ki.sendText(msg.to,"Already Bos! ")
+                kk.sendText(msg.to,"Always On")
+                kc.sendText(msg.to,"Yes i do! ")
 #-----------------------------------------------
             elif "Bc " in msg.text:
 				bctxt = msg.text.replace("Bc ","")
@@ -1654,9 +1654,9 @@ def bot(op):
                 kc.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
 #-----------------------------------------------
             elif msg.text in ["Respon","respon"]:
-                ki.sendText(msg.to,"Cv1")
-                kk.sendText(msg.to,"Cv2")
-                kc.sendText(msg.to,"Cv3")
+                ki.sendText(msg.to,"Cybertron 1")
+                kk.sendText(msg.to,"Cybertron 2")
+                kc.sendText(msg.to,"Cybertron 3")
 #-----------------------------------------------
 
             elif msg.text in ["Sp","Speed","speed"]:
@@ -1725,10 +1725,10 @@ def bot(op):
                         ki.kickoutFromGroup(msg.to,[jj])
                         kk.kickoutFromGroup(msg.to,[jj])
                         kc.kickoutFromGroup(msg.to,[jj])
-                    cl.sendText(msg.to,"Blacklist emang pantas tuk di usir")
-                    ki.sendText(msg.to,"Blacklist emang pantas tuk di usir")
-                    kk.sendText(msg.to,"Blacklist emang pantas tuk di usir")
-                    kc.sendText(msg.to,"Blacklist emang pantas tuk di usir")
+                    cl.sendText(msg.to,"Blacklist telah dikeluarkan")
+                    ki.sendText(msg.to,"Blacklist telah dikeluarkan")
+                    kk.sendText(msg.to,"Blacklist telah dikeluarkan")
+                    kc.sendText(msg.to,"Blacklist telah dikeluarkan")
             elif msg.text in ["Clear"]:
                 if msg.toType == 2:
                     group = cl.getGroup(msg.to)
