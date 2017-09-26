@@ -97,7 +97,7 @@ wait = {
     "wblacklist":False,
     "dblacklist":False,
     "protectionOn":True,
-    "atjointicket":True
+    "atjointicket":False
     }
 
 wait2 = {
