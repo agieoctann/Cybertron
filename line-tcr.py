@@ -73,7 +73,7 @@ KAC=[cl,ki,kk,kc]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
-Cmid = kc.getProfile().u68c0341ad4fc7e5735cd7b525da9145e
+Cmid = kc.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid]
 admin=["ua7f6b7ce83b319e2c3cd4d3486ad6723"]
