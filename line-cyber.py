@@ -119,7 +119,6 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
     if to not in messageReq:
         messageReq[to] = -1
     messageReq[to] += 1
-	client._client.sendMessage(messageReq[to], mes)
 
 def NOTIFIED_READ_MESSAGE(op):
     try:
