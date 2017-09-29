@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-import CYBERT
-from CYBERT.lib.curve.ttypes import *
+import LINETCR
+from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re
 
-cl = CYBERT.LINE()
+cl = LINETCR.LINE()
 cl.login(qr=True)
 cl.loginResult()
 
