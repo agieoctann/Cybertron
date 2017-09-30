@@ -156,9 +156,7 @@ def SEND_MESSAGE(op):
                     print "ok"
                     _name = msg.text.replace("/Clean","")
                     gs = client.getGroup(msg.to)
-                    sendMessage(msg.to,"Atettion!!")
-					sendMessage(msg.to,"Cybertron Cleaning Up This Group!")
-					sendMessage(msg.to,"Don't Panic & Keep Enjoy")
+                    sendMessage(msg.to,"Atettion!! Cybertron Cleaning Up this Group")
                     targets = []
                     for g in gs.members:
                         if _name in g.displayName:
