@@ -134,17 +134,6 @@ def NOTIFIED_READ_MESSAGE(op):
     except:
         pass
 
-def NOTIFIED_ACCEPT_GROUP_INVITATION(op):
-    #print op
-    try:
-        sendMessage(op.param1, client.getContact(op.param2).displayName + "WELCOME to " + group.name)
-    except Exception as e:
-        print e
-        print ("\n\nNOTIFIED_ACCEPT_GROUP_INVITATION\n\n")
-        return
-
-tracer.addOpInterrupt(17,NOTIFIED_ACCEPT_GROUP_INVITATION)
-
 def SEND_MESSAGE(op):
     msg = op.message
     try:
